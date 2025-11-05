@@ -2,8 +2,8 @@
 // Konfigurasi Supabase
 // ------------------------------
 const supabaseUrl = "https://grzqfhiwrytumirzbrql.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."; // ganti dengan anon key milikmu
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdyenFmaGl3cnl0dW1pcnpicnFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIzNTg5NzksImV4cCI6MjA3NzkzNDk3OX0.PK57fNcDqDqJV9FPBiFjfudv7d1nZ9bymQFcLhAdPKY";
+
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 console.log("🟢 Supabase initialized");
@@ -101,4 +101,5 @@ async function showUpload() {
 // Cek sesi login saat load
 supabase.auth.getSession().then(({ data: { session } }) => {
   if (session) showUpload();
+
 });
