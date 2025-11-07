@@ -42,6 +42,8 @@ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
       }
     }
 
+      window.checkPassword = checkPassword;
+
     async function loadPhotos() {
       const { data, error } = await supabase.storage
         .from("photos")
@@ -68,3 +70,4 @@ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 </body>
 
 </html>
+
